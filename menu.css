@@ -1,0 +1,988 @@
+
+:root {
+
+    --white: hsl(0, 0%, 100%);
+
+    --fs-1: 4.2rem;
+    --fs-2: 3.2rem;
+    --fs-3: 2.3rem;
+    --fs-4: 1.8rem;
+    --fs-5: 1.5rem;
+    --fs-6: 1.4rem;
+    --fs-7: 1.3rem;
+  
+    --fw-500: 500;
+    --fw-600: 600;
+
+  
+    --section-padding: 75px;
+
+    --shadow-1: 0 6px 15px 0 hsla(0, 0%, 0%, 0.05);
+    --shadow-2: 0 10px 30px hsla(0, 0%, 0%, 0.06);
+    --shadow-3: 0 10px 50px 0 hsla(220, 53%, 22%, 0.1);
+
+    --radius-circle: 50%;
+
+  
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  li { list-style: none; }
+  
+  a,
+  img,
+  span,
+  data,
+  input,
+  button,
+  ion-icon { display: block; }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  img { height: auto; }
+  
+  input,
+  button {
+    background: none;
+    border: none;
+    font: inherit;
+  }
+  
+  input { width: 100%; }
+  
+  button { cursor: pointer; }
+  
+  ion-icon { pointer-events: none; }
+  
+  
+  html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--white);
+    color: hsl(0, 0%, 50%);
+    font-size: 1.6rem;
+    line-height: 1.75;
+  }
+
+
+  
+  .container { padding-inline: 15px; }
+  
+  .section { padding-block: var(--section-padding); }
+  
+  .shape {
+    position: absolute;
+    display: none;
+  }
+  
+  .has-bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .h1,
+  .h2,
+  .h3 {
+    color: hsl(0, 0%, 9%);
+    font-family: 'League Spartan', sans-serif;
+    line-height: 1;
+  }
+  
+  .h1,
+  .h2 { font-weight: var(--fw-600); }
+  
+  .h1 { font-size: var(--fs-1); }
+  
+  .h2 { font-size: var(--fs-2); }
+  
+  .h3 {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-500);
+  }
+  
+  .section-title {
+    --color: hsl(351, 83%, 61%);
+    text-align: center;
+  }
+
+  .section-title-coloring{
+    color: white;
+  }
+
+  .white-color-h{
+    color: white !important;
+  }
+  
+  .section-title .span {
+    display: inline-block;
+    color: var(--color);
+  }
+  
+  .btn {
+    background-color: hsl(170, 75%, 41%);
+    color: var(--white);
+    font-family: 'League Spartan', sans-serif;
+    font-size: var(--fs-4);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    max-width: max-content;
+    padding: 10px 20px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+
+
+  
+  .img-holder {
+    aspect-ratio: var(--width) / var(--height);
+    background-color: hsl(0, 0%, 80%);
+    overflow: hidden;
+  }
+
+  .img-c{
+    height: 25px;
+    width: 25px;
+  }
+
+  .img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .section-subtitle {
+    font-size: var(--fs-5);
+    text-transform: uppercase;
+    font-weight: var(--fw-500);
+    letter-spacing: 1px;
+    text-align: center;
+    margin-block-end: 15px;
+  }
+  
+  .section-text {
+    font-size: var(--fs-5);
+    text-align: center;
+    margin-block: 15px 25px;
+  }
+  
+  .grid-list {
+    display: grid;
+    gap: 30px;
+  }
+  
+  .category-card,
+  .stats-card { background-color: hsla(var(--color), 0.1); }
+  
+  :is(.booking-p, .meals) .section-title { margin-block-end: 40px; }
+
+  
+  .header .btn { display: none; }
+  
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    padding-block: 12px;
+    box-shadow: var(--shadow-1);
+    z-index: 4;
+  }
+
+  .header{
+    position: fixed;
+  }
+  
+  
+  .header .container,
+  .header-actions,
+  .navbar .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .header-action-btn,
+  .nav-close-btn {
+    position: relative;
+    color: hsl(0, 0%, 9%);
+    font-size: 24px;
+    transition: 0.25s ease;
+  }
+  
+  .header-action-btn:is(:hover, :focus) { color: hsl(170, 75%, 41%); }
+  
+
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    background-color: var(--white);
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .navbar .wrapper {
+    padding: 15px 20px;
+    border-block-end: 1px solid hsl(0, 0%, 90%);
+  }
+  
+  .nav-close-btn {
+    background-color: var(--white);
+    box-shadow: var(--shadow-2);
+    padding: 8px;
+    border-radius: var(--radius-circle);
+  }
+  
+  .nav-close-btn:is(:hover, :focus) {
+    background-color: hsl(170, 75%, 41%);
+    color: var(--white);
+  }
+  
+  .navbar-list { padding: 15px 20px; }
+  
+  .navbar-item:not(:last-child) { border-block-end: 1px solid hsl(0, 0%, 90%); }
+  
+  .navbar-link {
+    padding-block: 8px;
+    font-weight: var(--fw-500);
+    transition: 0.25s ease;
+  }
+  
+  .navbar-link:is(:hover, :focus) { color: hsl(170, 75%, 41%); }
+  
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background-color: hsla(0, 0%, 0%, 0.8);
+    pointer-events: none;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.25s ease;
+  } 
+
+  
+  .hotel { padding-block-start: calc(var(--section-padding) + 80px); }
+  
+  .hotel .container {
+    display: grid;
+    gap: 40px;
+  }
+  
+  .hotel-text {
+    color: hsl(0, 0%, 9%);
+    font-size: var(--fs-4);
+    text-align: center;
+    margin-block: 18px 20px;
+  }
+  
+  .hotel .btn { margin-inline: auto; }
+  
+  .hotel-banner {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  
+  .hotel-banner .img-holder.one {
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 110px;
+  }
+  
+  .hotel-banner .img-holder.two {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 90px;
+  }
+
+  .img-c-s-z{
+    transition: all 0.4s;
+  }
+  .img-c-s-z:hover{
+    transform: scale(1.1);
+    filter: brightness(90%);
+  }
+  
+  
+  .category .section-subtitle { color: hsl(351, 83%, 61%); }
+  
+  .category .section-title { --color: hsl(170, 75%, 41%); }
+  
+  .category .section-text { margin-block-end: 40px; }
+  
+  .category-card {
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 6px;
+  }
+  
+  .category-card .card-icon {
+    background-color: hsla(var(--color), 0.1);
+    width: 80px;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-circle);
+    margin-inline: auto;
+    margin-block-end: 30px;
+  }
+  
+  .category-card .card-text {
+    color: hsl(0, 0%, 9%);
+    font-size: var(--fs-5);
+    margin-block: 15px 25px;
+  }
+  
+  .category-card .card-badge {
+    background-color: hsla(var(--color), 0.1);
+    color: hsl(var(--color));
+    font-size: var(--fs-5);
+    font-weight: var(--fw-500);
+    padding: 2px 18px;
+    max-width: max-content;
+    margin-inline: auto;
+    border-radius: 6px;
+  }
+  
+  
+  .about {
+    padding-block-start: 0;
+    overflow: hidden;
+  }
+  .about-t-spacing{
+    margin-top: 70px;
+  }
+  
+  .about .container {
+    display: grid;
+    gap: 30px;
+  }
+  
+  .about-banner {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-banner .img-holder { border-radius: 11px; }
+  
+  .about-shape-2 {
+    display: block;
+    bottom: -100px;
+    left: -60px;
+    animation: bounce 2.5s infinite;
+  }
+  
+  .about :is(.section-subtitle, .section-title, .section-text) {
+    text-align: left;
+  }
+  
+  .about-item {
+    margin-block: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .about-item ion-icon {
+    color: hsl(42, 94%, 55%);
+    font-size: 20px;
+    --ionicon-stroke-width: 50px;
+  }
+  
+  .about-item .span {
+    color: hsl(0, 0%, 9%);
+    font-family: 'League Spartan', sans-serif;
+  }
+
+  
+  .booking-p { background-color: hsl(36, 33%, 94%); }
+  
+  .booking-p-card {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .img-z-s-h{
+    transition: all 0.4s;
+  }
+  .img-z-s-h:hover{
+    transform: scale(1.1);
+  }
+  
+  .booking-p-card .img-cover { transition: 0.5s ease; }
+  
+  
+  .booking-p-card :is(.abs-badge, .badge) {
+    font-family: 'League Spartan', sans-serif;
+    border-radius: 4px;
+  }
+  
+  .booking-p-card .abs-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: hsl(42, 94%, 55%);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 1;
+    padding: 6px 8px;
+    padding-block-end: 3px;
+  }
+  
+  .booking-p-card .abs-badge ion-icon {
+    font-size: 18px;
+    margin-block-end: 5px;
+    --ionicon-stroke-width: 50px;
+  }
+  
+  .booking-p-card .card-content { padding: 25px; }
+  
+  .booking-p-card .badge {
+    background-color: hsla(170, 75%, 41%, 0.15);
+    max-width: max-content;
+    color: hsl(170, 75%, 41%);
+    line-height: 25px;
+    padding-inline: 10px;
+  }
+  
+  .booking-p-card .card-title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-block: 15px 8px;
+    transition: 0.25s ease;
+  }
+  
+  .booking-p-card .card-title:is(:hover, :focus) { color: hsl(170, 75%, 41%); }
+  
+  .booking-p-card :is(.wrapper, .rating-wrapper, .card-meta-list, .card-meta-item) {
+    display: flex;
+    align-items: center;
+  }
+  
+  .booking-p-card .wrapper { gap: 10px; }
+  
+  .booking-p-card .rating-wrapper { gap: 3px; }
+  
+  .booking-p-card .rating-wrapper ion-icon { color: hsl(42, 94%, 55%); }
+  
+  .booking-p-card .rating-text {
+    color: hsl(0, 0%, 9%);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-500);
+  }
+  
+  .booking-p-card .price {
+    color: hsl(351, 83%, 61%);
+    font-family: 'League Spartan', sans-serif;
+    font-size: var(--fs-4);
+    font-weight: var(--fw-600);
+    margin-block: 8px 15px;
+  }
+  
+  .booking-p-card .card-meta-list { flex-wrap: wrap; }
+  
+  .booking-p-card .card-meta-item {
+    position: relative;
+    gap: 5px;
+  }
+  
+  .booking-p-card .card-meta-item ion-icon {
+    color: hsl(0, 0%, 65%);
+    --ionicon-stroke-width: 50px;
+  }
+  
+  .booking-p-card .card-meta-item .span {
+    color: hsl(0, 0%, 9%);
+    font-size: var(--fs-7);
+  }
+  
+  .booking-p .btn {
+    margin-inline: auto;
+    margin-block-start: 60px;
+  }
+  
+
+  
+  .b-hotel-a {
+    background-size: contain;
+    background-position: center top;
+  }
+  
+  .b-hotel-a-banner {
+    position: relative;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 120px;
+  }
+
+  
+  .stats-card {
+    text-align: center;
+    padding: 25px;
+    border-radius: 11px;
+  }
+  
+  .stats-card :is(.card-title, .card-text) { font-family: 'League Spartan', sans-serif; }
+  
+  .stats-card .card-title {
+    color: hsl(var(--color));
+    font-size: var(--fs-2);
+    line-height: 1.1;
+  }
+  
+  .stats-card .card-text {
+    color: hsl(0, 0%, 9%);
+    text-transform: uppercase;
+  }
+  
+  
+  .meals-card .card-banner { border-radius: 11px; }
+  
+
+  
+
+  
+  .meals-card .card-content {
+    position: relative;
+    margin-inline: 15px;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 11px;
+    box-shadow: var(--shadow-3);
+    margin-block-start: -100px;
+    z-index: 1;
+  }
+  
+  
+
+  
+  .meals-card :is(.card-meta-item, .card-text, .card-subtitle) {
+    font-size: var(--fs-5);
+  }
+  
+  .meals-card .card-subtitle { text-transform: uppercase; }
+  
+  .meals-card .card-title {
+    margin-block: 10px 15px;
+    transition: 0.25s ease;
+  }
+  
+  .meals-card .card-title:is(:hover, :focus) { color: hsl(170, 75%, 41%); }
+  
+  .meals-card :is(.card-meta-list, .card-meta-item) { display: flex; }
+  
+  .meals-card .card-meta-list {
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    margin-block-end: 20px;
+  }
+  
+  .meals-card .card-meta-item {
+    gap: 10px;
+    align-items: center;
+    color: hsl(0, 0%, 9%);
+  }
+  
+  .meals-card .card-meta-item ion-icon {
+    color: hsl(170, 75%, 41%);
+    font-size: 18px;
+    --ionicon-stroke-width: 40px;
+  }
+
+  .footer {
+    background-repeat: no-repeat;
+    background-color: hsl(180, 3%, 7%);
+    color: hsl(0, 0%, 73%);
+    font-size: var(--fs-5);
+  }
+  .logo-big-f{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .footer-top {
+    display: grid;
+    gap: 30px;
+  }
+  
+  .footer-brand-text { margin-block: 20px; }
+  
+  .footer-brand .wrapper {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .footer-brand .wrapper .span { font-weight: var(--fw-500); }
+  
+  .footer-link { transition: 0.25s ease; }
+  
+  .footer-link:is(:hover, :focus) { color: hsl(170, 75%, 41%); }
+  
+  .footer-list-title {
+    color: var(--white);
+    font-family: 'League Spartan', sans-serif;
+    font-size: var(--fs-3);
+    font-weight: var(--fw-600);
+    margin-block-end: 10px;
+  }
+  
+  .footer-list .footer-link { padding-block: 5px; }
+  
+  .newsletter-form { margin-block: 20px 35px; }
+  
+  .newsletter-form .input-field {
+    background-color: var(--white);
+    padding: 12px;
+    border-radius: 6px;
+    margin-block-end: 20px;
+  }
+  
+  .newsletter-form .btn {
+    min-width: 100%;
+    justify-content: center;
+  }
+  
+  .social-list {
+    display: flex;
+    gap: 25px;
+  }
+  
+  .social-link { font-size: 20px; }
+  
+  .footer-bottom {
+    border-block-start: 1px solid hsl(0, 0%, 9%);
+    padding-block: 30px;
+  }
+  
+  .copyright { text-align: center; }
+  
+  .copyright-link {
+    color: hsl(170, 75%, 41%);
+    display: inline-block;
+  }
+  
+
+  
+  .back-top-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background-color: hsl(170, 75%, 41%);
+    color: var(--white);
+    font-size: 20px;
+    padding: 15px;
+    border-radius: var(--radius-circle);
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.25s ease;
+  }
+  
+
+  
+  @media (min-width: 575px) {
+
+  
+    .container {
+      max-width: 520px;
+      width: 100%;
+      margin-inline: auto;
+    }
+  
+    .grid-list { grid-template-columns: 1fr 1fr; }
+  
+    :is(.booking-p, .meals) .grid-list { grid-template-columns: 1fr; }
+  
+
+  
+    .header .container { max-width: unset; }
+  
+    .header-actions { gap: 30px; }
+  
+
+  
+    .hotel-banner { grid-template-columns: 1fr 0.9fr; }
+
+  
+    .b-hotel-a .play-btn { padding: 25px; }
+  
+  
+    .stats-card { padding: 40px 30px; }
+  
+  
+
+  
+    .footer-brand,
+    .footer-list:last-child { grid-column: 1 / 3; }
+  
+    .newsletter-form {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .newsletter-form .input-field { margin-block-end: 0; }
+  
+    .newsletter-form .btn { min-width: max-content; }
+  
+  }
+  
+
+
+  
+  @media (min-width: 768px) {
+
+  
+    :root {
+
+      --fs-1: 4.6rem;
+      --fs-2: 3.8rem;
+  
+    }
+
+  
+    .container { max-width: 720px; }
+  
+    .btn { padding: 15px 30px; }
+  
+    :is(.booking-p, .meals) .grid-list { grid-template-columns: 1fr 1fr; }
+  
+
+    .header .container { padding-inline: 30px; }
+  
+    .header .btn {
+      display: flex;
+      padding: 10px 30px;
+      margin-inline: 20px;
+    }
+
+    .hotel { padding-block-start: calc(var(--section-padding) + 90px); }
+  
+    .hotel .container { gap: 50px; }
+  
+    .hotel-text { margin-block-end: 30px; }
+  
+    .hotel-banner {
+      position: relative;
+      z-index: 1;
+    }
+  
+    .hotel-banner .img-holder { max-width: max-content; }
+  
+    .hotel-banner .img-holder.one { justify-self: flex-end; }
+  
+    .hotel-banner .img-holder.two { margin-block-start: 100px; }
+  
+    .hotel-shape-1 {
+      display: block;
+      position: absolute;
+      bottom: -100px;
+      left: -30px;
+    }
+  
+  
+
+  
+    .about { padding-block-start: 50px; }
+  
+    .about-banner {
+      padding: 60px;
+      padding-inline-end: 0;
+    }
+  
+    .about-banner .img-holder {
+      max-width: max-content;
+      margin-inline: auto;
+    }
+  
+    .about-shape-1 {
+      display: block;
+      top: -40px;
+      right: -70px;
+    }
+  
+
+  
+    .footer-brand,
+    .footer-list:last-child { grid-column: auto; }
+  
+    .newsletter-form .btn { padding-block: 10px; }
+  
+  }
+
+  
+  @media (min-width: 992px) {
+  
+
+  
+    :root {
+
+  
+      --fs-1: 5.5rem;
+      --fs-2: 4.5rem;
+  
+    }
+
+    .container { max-width: 960px; }
+  
+    .grid-list { grid-template-columns: repeat(4, 1fr); }
+  
+    :is(.booking-p, .meals) .grid-list { grid-template-columns: repeat(3, 1fr); }
+  
+
+  
+    .hotel .container {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  
+    .hotel .section-title,
+    .hotel-text { text-align: left; }
+  
+    .hotel .btn { margin-inline: 0; }
+  
+    .text-control-c-w{
+      color: #fff;
+    }
+  
+    .about .container {
+      grid-template-columns: 1fr 0.6fr;
+      align-items: center;
+      gap: 60px;
+    }
+  
+
+  
+    .b-hotel-a-banner {
+      max-width: 75%;
+      margin-inline: auto;
+    }
+  
+  
+
+  
+    .footer .grid-list { grid-template-columns: 1fr 1.2fr; }
+  
+  }
+  
+
+  
+  @media (min-width: 1200px) {
+
+  
+    :root {
+  
+
+  
+      --fs-1: 6.5rem;
+  
+
+  
+      --section-padding: 120px;
+  
+    }
+  
+
+  
+    .container { max-width: 1185px; }
+  
+    .shape { display: block; }
+  
+    .about-content,
+    .b-hotel-a-card,
+    .meals { position: relative; }
+  
+
+  
+    .header-action-btn:last-child,
+    .navbar .wrapper,
+    .overlay { display: none; }
+  
+  
+    .navbar { all: unset; }
+  
+    .navbar-list {
+      display: flex;
+      gap: 50px;
+      padding: 0;
+    }
+  
+    .navbar-item:not(:last-child) { border-block-end: none; }
+  
+    .navbar-link {
+      color: hsl(0, 0%, 9%);
+      padding-block: 20px;
+    }
+  
+    .header .btn { margin-inline-end: 0; }
+  
+
+    .hotel { padding-block-start: calc(var(--section-padding) + 120px); }
+  
+    .hotel .container { gap: 80px; }
+  
+    .hotel-shape-2 {
+      top: -80px;
+      z-index: -1;
+    }
+
+    .about .container { gap: 110px; }
+  
+    .about-banner .img-holder { margin-inline: 0; }
+  
+    .about-content { z-index: 1; }
+  
+    .about-shape-4 {
+      top: 30px;
+      right: -60px;
+      z-index: -1;
+    }
+  
+
+  
+    .b-hotel-a-shape-1 {
+      top: -50px;
+      left: 0;
+    }
+  
+    .b-hotel-a-shape-2 {
+      top: -80px;
+      right: 120px;
+      z-index: 1;
+    }
+  
+  
+  }
+  .img-cover{
+    transition: all 0.4s;
+  }
+
+.img-cover:hover{
+  transform: scale(1.1);
+
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Pretoria Resort</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gallery</h1>
+        <p>Experience the beauty of our resort through our curated images.</p>
+    </header>
+
+    <section class="gallery">
+        <!-- Image Thumbnails with Captions -->
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/resortView.avif" alt="Resort View">
+            <div class="caption">Breathtaking resort view</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/luxuriousRoom.avif" alt="Luxurious Room">
+            <div class="caption">Elegant and spacious rooms</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/poolside.png" alt="Poolside Bliss">
+            <div class="caption">Relax by the infinity pool</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/dining.png" alt="Fine Dining Experience">
+            <div class="caption">Exquisite fine dining</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/spa.png" alt="Relaxing Spa">
+            <div class="caption">Indulge in a soothing spa session</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/cruise.png" alt="Relaxing Spa">
+            <div class="caption">Cruise Time</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/conference room.png" alt="Relaxing Spa">
+            <div class="caption">Gorgeous and elegant conference room</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/art gallery.png" alt="Relaxing Spa">
+            <div class="caption">Come clear your mind in our art gallery</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/concert hall.png" alt="Relaxing Spa">
+            <div class="caption">Our acoustically treated concert hall</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/team.png" alt="Relaxing Spa">
+            <div class="caption">Meet our professional team</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/waiter.png" alt="Relaxing Spa">
+            <div class="caption">Come & feel special</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/beachfront.jpg" alt="Beachfront Sunset">
+            <div class="caption">Unforgettable beachfront sunsets</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/bar.png" alt="Relaxing Spa">
+            <div class="caption">Wines from different corners of the world</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+            <img src="images/band.png" alt="Relaxing Spa">
+            <div class="caption">Don't miss out our wonderful Live Band</div>
+        </div>
+    </section>
+
+    <!-- Lightbox for Fullscreen View -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-img">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>

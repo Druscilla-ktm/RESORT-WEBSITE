@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Booking</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
+            <div class="container-fluid page-header-inner py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Room Reservation</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+        <!-- Booking Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="mb-5">Book A <span class="text-primary text-uppercase">Room</span> For Yourself </h1>
+                </div>
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="images/about-1.jpg" style="margin-top: 25%;">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="images/about-2.jpg">
+                            </div>
+                            <div class="col-6 text-end">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="images/about-3.jpg">
+                            </div>
+                            <div class="col-6 text-start">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="images/about-4.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <form action="book_room.php" method="POST">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date3" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" id="checkin" name="checkin" placeholder="Check In" data-target="#date3" data-toggle="datetimepicker" />
+                                            <label for="checkin">Check In</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating date" id="date4" data-target-input="nearest">
+                                            <input type="text" class="form-control datetimepicker-input" id="checkout" name="checkout" placeholder="Check Out" data-target="#date4" data-toggle="datetimepicker" />
+                                            <label for="checkout">Check Out</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="adults" name="adults">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            </select>
+                                            <label for="select1">Select number of Adult(s)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="children" name="children">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            </select>
+                                            <label for="select2">Select number of Child(ren)</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="room_type" name="room_type">
+                                            <option value="Standard">Standard</option>
+                                            <option value="Deluxe">Deluxe</option>
+                                            <option value="Suite">Suite</option>
+                                            <option value="Villa">Villa</option>
+                                            </select>
+                                            <label for="select3">Select type of the Room</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="rooms" name="rooms">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            </select>
+                                            <label for="select1">Select number of Room(s)</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="bed" name="bed">
+                                            <option value="Single">Single</option>
+                                            <option value="Double">Double</option>
+                                            <option value="King">King</option>
+                                            <option value="Twin">Twin</option>
+                                            </select>
+                                            <label for="select1">Bed Preference</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="view" name="view">
+                                            <option value="Garden">Garden</option>
+                                            <option value="Ocean">Ocean</option>
+                                            <option value="Poolside">Poolside</option>
+                                            <option value="No feature">No feature</option>
+                                            </select>
+                                            <label for="select1">View Preference</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="smoking" name="smoking">
+                                            <option value="Smoking">Smoking</option>
+                                            <option value="Non-smoking">Non-smoking</option>
+                                            </select>
+                                            <label for="select1">Smoking/non-smoking room</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating">
+                                            <select class="form-select" id="payment" name="payment">
+                                            <option value="Cash">Cash</option>
+                                            <option value="Card">Card</option>
+                                            <option value="Mobile Money">Mobile Money</option>
+                                            <option value="Bank Transfer">Bank Transfer</option>
+                                            <option value="Paypal">PayPal</option>
+                                            </select>
+                                            <label for="select3">Method of Payment</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Special Request" id="message" name="message" style="height: 100px"></textarea>
+                                            <label for="message">Special Request</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                                        <a class="btn btn-sm btn-dark rounded py-2 px-4" href="room.html">View more Details</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Booking End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

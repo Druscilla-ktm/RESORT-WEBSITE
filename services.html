@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pretrior Resort Services & Booking</title>
+  <link rel="stylesheet" href="services.css" />
+</head>
+<body>
+  <header>
+    <h1>Pretrior Resort</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Booking</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service-card">
+        <h3>Luxury Room Booking</h3>
+        <p>Spacious rooms with beautiful views and premium facilities.</p>
+      </div>
+      <div class="service-card">
+        <h3>Gym & Sauna</h3>
+        <p>Relaxing massages, facials, and wellness treatments.</p>
+      </div>
+      <div class="service-card">
+        <h3>Club & Nightlife</h3>
+        <p>Explore the night themes(eg. ladies' night,DJ events),Dress code(If any).</p>
+      </div>
+      <div class="service-card">
+        <h3>Theatre & Entertainment</h3>
+        <p>Enjoy upcoming shows or movies,special events like karaoke nights, talent shows</p>
+      </div>
+      <div class="service-card">
+        <h3>Events & Conferences</h3>
+        <p>Event packages(weddings,business meetings),Equipments provided(eg photos & videoes of the event)</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="booking">
+    <h2>Book a Service</h2>
+    <form action="#" method="POST" class="booking-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="service">Select Service</label>
+      <select id="service" name="service" required>
+        <option value="">--Choose a service--</option>
+        <option value="room">Luxury Room Booking</option>
+        <option value="sauna">Gym & Sauna</option>
+        <option value="Club">Club & Nightlife</option>
+        <option value="Events">Theatre & Entertainment</option>
+        <option value="Club">Events & Conferences</option>
+       
+      </select>
+
+      <label for="date">Preferred Date</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="message">Additional Notes</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Pretrior Resort. All rights reserved.</p>
+  </footer>
+</body>
+</html>
