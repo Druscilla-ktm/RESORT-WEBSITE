@@ -13,27 +13,7 @@
   }
   
 
-  header {
-    background: #00695c;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin-bottom: 10px;
-  }
-  
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
+
   
 
   .services {
@@ -108,10 +88,110 @@
   }
   
 
-  footer {
-    background: #00695c;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
+ /*Footer code  */
+.footer {
+  background-color: #111;
+  color: #eee;
+  padding: 4rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 1rem;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s;
+}
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.brand-highlight {
+  color: #00c39a;
+  font-weight: 600;
+}
+/* Navbar Base */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 2rem 3rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo and Brand */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+.logo span {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.nav-links li a:hover {
+  color: #009688;
+}
+
+/* Search and Bookings */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.search-icon {
+  font-size: 1.2rem;
+  color: #555;
+  text-decoration: none;
+}
+.booking-btn {
+  background-color: #00c39a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.booking-btn:hover {
+  background-color: #009f80;
+}
